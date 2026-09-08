@@ -1,1 +1,7 @@
 # Sistema_Helpdesk_Data_Warehouse
+
+![status](https://img.shields.io/badge/status-conclu%C3%ADdo-brightgreen)
+<a href="https://n8n.io/"><img src="https://img.shields.io/badge/tech-python-blue" alt="N8N"/></a>
+<a href="https://www.postgresql.org/"><img src="https://img.shields.io/badge/database-postgresql-blue" alt="Postgres"/></a>
+<a href="https://nocodb.com//"><img src="https://img.shields.io/badge/ETL-Pentaho-red" alt="NocoDB"/></a>
+<a href="https://www.microsoft.com/pt-br/power-platform/products/power-bi"><img src="https://img.shields.io/badge/visualization-power_bi-orange" alt="Power BI"/></a>
