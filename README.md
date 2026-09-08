@@ -1,7 +1,7 @@
 # Sistema_Helpdesk_Data_Warehouse
 
 ![status](https://img.shields.io/badge/status-Em_andamento-brightgreen)
-<a href=""><img src="https://img.shields.io/badge/Github-repo-blue?logo=github&labelColor=black" alt="Github"/></a>
+<a href=""><img src="https://img.shields.io/badge/Github-repo-blue?logo=github" alt="Github"/></a>
 <a href="https://n8n.io/"><img src="https://img.shields.io/badge/N8N-Tech-blue?logo=n8n" alt="N8N"/></a>
 
 <a href="https://n8n.io/"><img src="https://img.shields.io/badge/Tech-N8N-blue" alt="N8N"/></a>
