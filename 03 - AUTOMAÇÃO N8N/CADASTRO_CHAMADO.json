@@ -1,0 +1,3080 @@
+{
+  "name": "CADASTRO_CHAMADO",
+  "nodes": [
+    {
+      "parameters": {
+        "authentication": "nocoDbApiToken",
+        "operation": "update",
+        "workspaceId": {
+          "__rl": true,
+          "value": "wafwewrc",
+          "mode": "list",
+          "cachedResultName": "Default Workspace",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc"
+        },
+        "projectId": {
+          "__rl": true,
+          "value": "pjogoy8peb1cou2",
+          "mode": "list",
+          "cachedResultName": "ORIGEM",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc/pjogoy8peb1cou2"
+        },
+        "table": {
+          "__rl": true,
+          "value": "m5jo2xh4ovkb3ld",
+          "mode": "list",
+          "cachedResultName": "Chamados",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc/pjogoy8peb1cou2/m5jo2xh4ovkb3ld"
+        },
+        "id": "={{ $('cod_chamado').item.json.Id }}",
+        "fieldsMapper": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "cod_chamado": "={{ $('cod_chamado').item.json.cod_chamado }}",
+            "setor_solicitante": "={{ $('Execute a SQL query').item.json.setor_solicitante }}",
+            "Nome_solicitante": "={{ $('Execute a SQL query').item.json.funcionario }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "email_solicitante",
+              "displayName": "email_solicitante",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "setor_responsavel",
+              "displayName": "setor_responsavel",
+              "type": "options",
+              "options": [
+                {
+                  "name": "TI",
+                  "value": "TI"
+                },
+                {
+                  "name": "RH",
+                  "value": "RH"
+                },
+                {
+                  "name": "FINANCEIRO",
+                  "value": "FINANCEIRO"
+                },
+                {
+                  "name": "COMPRAS",
+                  "value": "COMPRAS"
+                },
+                {
+                  "name": "LOGISTICA",
+                  "value": "LOGISTICA"
+                }
+              ],
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Categoria",
+              "displayName": "Categoria",
+              "type": "options",
+              "options": [
+                {
+                  "name": "Suporte de Hardware",
+                  "value": "Suporte de Hardware"
+                },
+                {
+                  "name": "Acesso a Sistemas",
+                  "value": "Acesso a Sistemas"
+                },
+                {
+                  "name": "Instalação/Atualização de Softwares",
+                  "value": "Instalação/Atualização de Softwares"
+                },
+                {
+                  "name": "Problemas de Rede e Internet",
+                  "value": "Problemas de Rede e Internet"
+                },
+                {
+                  "name": "Telefonia e Ramais",
+                  "value": "Telefonia e Ramais"
+                },
+                {
+                  "name": "Dúvidas sobre Folha de Pagamento",
+                  "value": "Dúvidas sobre Folha de Pagamento"
+                },
+                {
+                  "name": "Solicitação/Alteração de Férias",
+                  "value": "Solicitação/Alteração de Férias"
+                },
+                {
+                  "name": "Envio de Atestados Médicos",
+                  "value": "Envio de Atestados Médicos"
+                },
+                {
+                  "name": "Processo de Integração",
+                  "value": "Processo de Integração"
+                },
+                {
+                  "name": "Benefícios",
+                  "value": "Benefícios"
+                },
+                {
+                  "name": "Reembolso de Despesas",
+                  "value": "Reembolso de Despesas"
+                },
+                {
+                  "name": "Pagamento de Fornecedores",
+                  "value": "Pagamento de Fornecedores"
+                },
+                {
+                  "name": "Emissão de Notas Fiscais",
+                  "value": "Emissão de Notas Fiscais"
+                },
+                {
+                  "name": "Adiantamentos de Viagem",
+                  "value": "Adiantamentos de Viagem"
+                },
+                {
+                  "name": "Cobranças e Conciliação Bancária",
+                  "value": "Cobranças e Conciliação Bancária"
+                },
+                {
+                  "name": "Solicitação de Novos Equipamentos/Licenças",
+                  "value": "Solicitação de Novos Equipamentos/Licenças"
+                },
+                {
+                  "name": "Compra de Insumos de Escritório",
+                  "value": "Compra de Insumos de Escritório"
+                },
+                {
+                  "name": "Cotação com Fornecedores",
+                  "value": "Cotação com Fornecedores"
+                },
+                {
+                  "name": "Renovação de Contratos de Serviços",
+                  "value": "Renovação de Contratos de Serviços"
+                },
+                {
+                  "name": "Cadastro de Novos Fornecedores",
+                  "value": "Cadastro de Novos Fornecedores"
+                },
+                {
+                  "name": "Agendamento de Coletas e Entregas",
+                  "value": "Agendamento de Coletas e Entregas"
+                },
+                {
+                  "name": "Rastreamento de Encomendas",
+                  "value": "Rastreamento de Encomendas"
+                },
+                {
+                  "name": "Problemas com Frota/Transporte",
+                  "value": "Problemas com Frota/Transporte"
+                },
+                {
+                  "name": "Divergência de Inventário/Estoque",
+                  "value": "Divergência de Inventário/Estoque"
+                },
+                {
+                  "name": "Recebimento de Mercadorias",
+                  "value": "Recebimento de Mercadorias"
+                },
+                {
+                  "name": "Outros",
+                  "value": "Outros"
+                }
+              ],
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "type": "options",
+              "options": [
+                {
+                  "name": "Aberto",
+                  "value": "Aberto"
+                },
+                {
+                  "name": "Em Análise",
+                  "value": "Em Análise"
+                },
+                {
+                  "name": "Em Andamento",
+                  "value": "Em Andamento"
+                },
+                {
+                  "name": "Finalizado",
+                  "value": "Finalizado"
+                },
+                {
+                  "name": "Cancelado",
+                  "value": "Cancelado"
+                }
+              ],
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "cod_chamado",
+              "displayName": "cod_chamado",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "email_responsavel",
+              "displayName": "email_responsavel",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Descrição",
+              "displayName": "Descrição",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Atestado",
+              "displayName": "Atestado",
+              "type": "array",
+              "display": true,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "dataCadastro",
+              "displayName": "dataCadastro",
+              "type": "dateTime",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "dataAtualiza",
+              "displayName": "dataAtualiza",
+              "type": "dateTime",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "setor_solicitante",
+              "displayName": "setor_solicitante",
+              "type": "options",
+              "options": [
+                {
+                  "name": "TI",
+                  "value": "TI"
+                },
+                {
+                  "name": "RH",
+                  "value": "RH"
+                },
+                {
+                  "name": "FINANCEIRO",
+                  "value": "FINANCEIRO"
+                },
+                {
+                  "name": "COMPRAS",
+                  "value": "COMPRAS"
+                },
+                {
+                  "name": "LOGISTICA",
+                  "value": "LOGISTICA"
+                }
+              ],
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Nome_solicitante",
+              "displayName": "Nome_solicitante",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "nome_responsavel",
+              "displayName": "nome_responsavel",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        }
+      },
+      "type": "n8n-nodes-base.nocoDb",
+      "typeVersion": 4,
+      "position": [
+        848,
+        -208
+      ],
+      "id": "846c7ee2-a5c1-480c-b675-57a3faf09639",
+      "name": "cod_chamado_TI",
+      "credentials": {
+        "nocoDbApiToken": {
+          "id": "VxfQf3JiyXF064HC",
+          "name": "NocoDB teste"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "nocoDbApiToken",
+        "operation": "update",
+        "workspaceId": {
+          "__rl": true,
+          "value": "wafwewrc",
+          "mode": "list",
+          "cachedResultName": "Default Workspace",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc"
+        },
+        "projectId": {
+          "__rl": true,
+          "value": "pjogoy8peb1cou2",
+          "mode": "list",
+          "cachedResultName": "ORIGEM",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc/pjogoy8peb1cou2"
+        },
+        "table": {
+          "__rl": true,
+          "value": "m5jo2xh4ovkb3ld",
+          "mode": "list",
+          "cachedResultName": "Chamados",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc/pjogoy8peb1cou2/m5jo2xh4ovkb3ld"
+        },
+        "id": "={{ $('cod_chamado').item.json.Id }}",
+        "fieldsMapper": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "cod_chamado": "={{ $('cod_chamado').item.json.cod_chamado }}",
+            "setor_solicitante": "={{ $('Execute a SQL query').item.json.setor_solicitante }}",
+            "Nome_solicitante": "={{ $('Execute a SQL query').item.json.funcionario }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "email_solicitante",
+              "displayName": "email_solicitante",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "setor_responsavel",
+              "displayName": "setor_responsavel",
+              "type": "options",
+              "options": [
+                {
+                  "name": "TI",
+                  "value": "TI"
+                },
+                {
+                  "name": "RH",
+                  "value": "RH"
+                },
+                {
+                  "name": "FINANCEIRO",
+                  "value": "FINANCEIRO"
+                },
+                {
+                  "name": "COMPRAS",
+                  "value": "COMPRAS"
+                },
+                {
+                  "name": "LOGISTICA",
+                  "value": "LOGISTICA"
+                }
+              ],
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Categoria",
+              "displayName": "Categoria",
+              "type": "options",
+              "options": [
+                {
+                  "name": "Suporte de Hardware",
+                  "value": "Suporte de Hardware"
+                },
+                {
+                  "name": "Acesso a Sistemas",
+                  "value": "Acesso a Sistemas"
+                },
+                {
+                  "name": "Instalação/Atualização de Softwares",
+                  "value": "Instalação/Atualização de Softwares"
+                },
+                {
+                  "name": "Problemas de Rede e Internet",
+                  "value": "Problemas de Rede e Internet"
+                },
+                {
+                  "name": "Telefonia e Ramais",
+                  "value": "Telefonia e Ramais"
+                },
+                {
+                  "name": "Dúvidas sobre Folha de Pagamento",
+                  "value": "Dúvidas sobre Folha de Pagamento"
+                },
+                {
+                  "name": "Solicitação/Alteração de Férias",
+                  "value": "Solicitação/Alteração de Férias"
+                },
+                {
+                  "name": "Envio de Atestados Médicos",
+                  "value": "Envio de Atestados Médicos"
+                },
+                {
+                  "name": "Processo de Integração",
+                  "value": "Processo de Integração"
+                },
+                {
+                  "name": "Benefícios",
+                  "value": "Benefícios"
+                },
+                {
+                  "name": "Reembolso de Despesas",
+                  "value": "Reembolso de Despesas"
+                },
+                {
+                  "name": "Pagamento de Fornecedores",
+                  "value": "Pagamento de Fornecedores"
+                },
+                {
+                  "name": "Emissão de Notas Fiscais",
+                  "value": "Emissão de Notas Fiscais"
+                },
+                {
+                  "name": "Adiantamentos de Viagem",
+                  "value": "Adiantamentos de Viagem"
+                },
+                {
+                  "name": "Cobranças e Conciliação Bancária",
+                  "value": "Cobranças e Conciliação Bancária"
+                },
+                {
+                  "name": "Solicitação de Novos Equipamentos/Licenças",
+                  "value": "Solicitação de Novos Equipamentos/Licenças"
+                },
+                {
+                  "name": "Compra de Insumos de Escritório",
+                  "value": "Compra de Insumos de Escritório"
+                },
+                {
+                  "name": "Cotação com Fornecedores",
+                  "value": "Cotação com Fornecedores"
+                },
+                {
+                  "name": "Renovação de Contratos de Serviços",
+                  "value": "Renovação de Contratos de Serviços"
+                },
+                {
+                  "name": "Cadastro de Novos Fornecedores",
+                  "value": "Cadastro de Novos Fornecedores"
+                },
+                {
+                  "name": "Agendamento de Coletas e Entregas",
+                  "value": "Agendamento de Coletas e Entregas"
+                },
+                {
+                  "name": "Rastreamento de Encomendas",
+                  "value": "Rastreamento de Encomendas"
+                },
+                {
+                  "name": "Problemas com Frota/Transporte",
+                  "value": "Problemas com Frota/Transporte"
+                },
+                {
+                  "name": "Divergência de Inventário/Estoque",
+                  "value": "Divergência de Inventário/Estoque"
+                },
+                {
+                  "name": "Recebimento de Mercadorias",
+                  "value": "Recebimento de Mercadorias"
+                },
+                {
+                  "name": "Outros",
+                  "value": "Outros"
+                }
+              ],
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "type": "options",
+              "options": [
+                {
+                  "name": "Aberto",
+                  "value": "Aberto"
+                },
+                {
+                  "name": "Em Análise",
+                  "value": "Em Análise"
+                },
+                {
+                  "name": "Em Andamento",
+                  "value": "Em Andamento"
+                },
+                {
+                  "name": "Finalizado",
+                  "value": "Finalizado"
+                },
+                {
+                  "name": "Cancelado",
+                  "value": "Cancelado"
+                }
+              ],
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "cod_chamado",
+              "displayName": "cod_chamado",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "email_responsavel",
+              "displayName": "email_responsavel",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Descrição",
+              "displayName": "Descrição",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Atestado",
+              "displayName": "Atestado",
+              "type": "array",
+              "display": true,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "dataCadastro",
+              "displayName": "dataCadastro",
+              "type": "dateTime",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "dataAtualiza",
+              "displayName": "dataAtualiza",
+              "type": "dateTime",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "setor_solicitante",
+              "displayName": "setor_solicitante",
+              "type": "options",
+              "options": [
+                {
+                  "name": "TI",
+                  "value": "TI"
+                },
+                {
+                  "name": "RH",
+                  "value": "RH"
+                },
+                {
+                  "name": "FINANCEIRO",
+                  "value": "FINANCEIRO"
+                },
+                {
+                  "name": "COMPRAS",
+                  "value": "COMPRAS"
+                },
+                {
+                  "name": "LOGISTICA",
+                  "value": "LOGISTICA"
+                }
+              ],
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Nome_solicitante",
+              "displayName": "Nome_solicitante",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "nome_responsavel",
+              "displayName": "nome_responsavel",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        }
+      },
+      "type": "n8n-nodes-base.nocoDb",
+      "typeVersion": 4,
+      "position": [
+        848,
+        -32
+      ],
+      "id": "a914df4c-c791-46a7-adc9-8f2c791877f0",
+      "name": "cod_chamado_RH",
+      "credentials": {
+        "nocoDbApiToken": {
+          "id": "VxfQf3JiyXF064HC",
+          "name": "NocoDB teste"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "nocoDbApiToken",
+        "operation": "update",
+        "workspaceId": {
+          "__rl": true,
+          "value": "wafwewrc",
+          "mode": "list",
+          "cachedResultName": "Default Workspace",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc"
+        },
+        "projectId": {
+          "__rl": true,
+          "value": "pjogoy8peb1cou2",
+          "mode": "list",
+          "cachedResultName": "ORIGEM",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc/pjogoy8peb1cou2"
+        },
+        "table": {
+          "__rl": true,
+          "value": "m5jo2xh4ovkb3ld",
+          "mode": "list",
+          "cachedResultName": "Chamados",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc/pjogoy8peb1cou2/m5jo2xh4ovkb3ld"
+        },
+        "id": "={{ $('cod_chamado').item.json.Id }}",
+        "fieldsMapper": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "cod_chamado": "={{ $('cod_chamado').item.json.cod_chamado }}",
+            "setor_solicitante": "={{ $('Execute a SQL query').item.json.setor_solicitante }}",
+            "Nome_solicitante": "={{ $('Execute a SQL query').item.json.funcionario }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "email_solicitante",
+              "displayName": "email_solicitante",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "setor_responsavel",
+              "displayName": "setor_responsavel",
+              "type": "options",
+              "options": [
+                {
+                  "name": "TI",
+                  "value": "TI"
+                },
+                {
+                  "name": "RH",
+                  "value": "RH"
+                },
+                {
+                  "name": "FINANCEIRO",
+                  "value": "FINANCEIRO"
+                },
+                {
+                  "name": "COMPRAS",
+                  "value": "COMPRAS"
+                },
+                {
+                  "name": "LOGISTICA",
+                  "value": "LOGISTICA"
+                }
+              ],
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Categoria",
+              "displayName": "Categoria",
+              "type": "options",
+              "options": [
+                {
+                  "name": "Suporte de Hardware",
+                  "value": "Suporte de Hardware"
+                },
+                {
+                  "name": "Acesso a Sistemas",
+                  "value": "Acesso a Sistemas"
+                },
+                {
+                  "name": "Instalação/Atualização de Softwares",
+                  "value": "Instalação/Atualização de Softwares"
+                },
+                {
+                  "name": "Problemas de Rede e Internet",
+                  "value": "Problemas de Rede e Internet"
+                },
+                {
+                  "name": "Telefonia e Ramais",
+                  "value": "Telefonia e Ramais"
+                },
+                {
+                  "name": "Dúvidas sobre Folha de Pagamento",
+                  "value": "Dúvidas sobre Folha de Pagamento"
+                },
+                {
+                  "name": "Solicitação/Alteração de Férias",
+                  "value": "Solicitação/Alteração de Férias"
+                },
+                {
+                  "name": "Envio de Atestados Médicos",
+                  "value": "Envio de Atestados Médicos"
+                },
+                {
+                  "name": "Processo de Integração",
+                  "value": "Processo de Integração"
+                },
+                {
+                  "name": "Benefícios",
+                  "value": "Benefícios"
+                },
+                {
+                  "name": "Reembolso de Despesas",
+                  "value": "Reembolso de Despesas"
+                },
+                {
+                  "name": "Pagamento de Fornecedores",
+                  "value": "Pagamento de Fornecedores"
+                },
+                {
+                  "name": "Emissão de Notas Fiscais",
+                  "value": "Emissão de Notas Fiscais"
+                },
+                {
+                  "name": "Adiantamentos de Viagem",
+                  "value": "Adiantamentos de Viagem"
+                },
+                {
+                  "name": "Cobranças e Conciliação Bancária",
+                  "value": "Cobranças e Conciliação Bancária"
+                },
+                {
+                  "name": "Solicitação de Novos Equipamentos/Licenças",
+                  "value": "Solicitação de Novos Equipamentos/Licenças"
+                },
+                {
+                  "name": "Compra de Insumos de Escritório",
+                  "value": "Compra de Insumos de Escritório"
+                },
+                {
+                  "name": "Cotação com Fornecedores",
+                  "value": "Cotação com Fornecedores"
+                },
+                {
+                  "name": "Renovação de Contratos de Serviços",
+                  "value": "Renovação de Contratos de Serviços"
+                },
+                {
+                  "name": "Cadastro de Novos Fornecedores",
+                  "value": "Cadastro de Novos Fornecedores"
+                },
+                {
+                  "name": "Agendamento de Coletas e Entregas",
+                  "value": "Agendamento de Coletas e Entregas"
+                },
+                {
+                  "name": "Rastreamento de Encomendas",
+                  "value": "Rastreamento de Encomendas"
+                },
+                {
+                  "name": "Problemas com Frota/Transporte",
+                  "value": "Problemas com Frota/Transporte"
+                },
+                {
+                  "name": "Divergência de Inventário/Estoque",
+                  "value": "Divergência de Inventário/Estoque"
+                },
+                {
+                  "name": "Recebimento de Mercadorias",
+                  "value": "Recebimento de Mercadorias"
+                },
+                {
+                  "name": "Outros",
+                  "value": "Outros"
+                }
+              ],
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "type": "options",
+              "options": [
+                {
+                  "name": "Aberto",
+                  "value": "Aberto"
+                },
+                {
+                  "name": "Em Análise",
+                  "value": "Em Análise"
+                },
+                {
+                  "name": "Em Andamento",
+                  "value": "Em Andamento"
+                },
+                {
+                  "name": "Finalizado",
+                  "value": "Finalizado"
+                },
+                {
+                  "name": "Cancelado",
+                  "value": "Cancelado"
+                }
+              ],
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "cod_chamado",
+              "displayName": "cod_chamado",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "email_responsavel",
+              "displayName": "email_responsavel",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Descrição",
+              "displayName": "Descrição",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Atestado",
+              "displayName": "Atestado",
+              "type": "array",
+              "display": true,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "dataCadastro",
+              "displayName": "dataCadastro",
+              "type": "dateTime",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "dataAtualiza",
+              "displayName": "dataAtualiza",
+              "type": "dateTime",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "setor_solicitante",
+              "displayName": "setor_solicitante",
+              "type": "options",
+              "options": [
+                {
+                  "name": "TI",
+                  "value": "TI"
+                },
+                {
+                  "name": "RH",
+                  "value": "RH"
+                },
+                {
+                  "name": "FINANCEIRO",
+                  "value": "FINANCEIRO"
+                },
+                {
+                  "name": "COMPRAS",
+                  "value": "COMPRAS"
+                },
+                {
+                  "name": "LOGISTICA",
+                  "value": "LOGISTICA"
+                }
+              ],
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Nome_solicitante",
+              "displayName": "Nome_solicitante",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "nome_responsavel",
+              "displayName": "nome_responsavel",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        }
+      },
+      "type": "n8n-nodes-base.nocoDb",
+      "typeVersion": 4,
+      "position": [
+        848,
+        160
+      ],
+      "id": "0a0ee132-bbc6-4906-a68e-be91ccbec293",
+      "name": "cod_chamado_FINANCEIRO",
+      "credentials": {
+        "nocoDbApiToken": {
+          "id": "VxfQf3JiyXF064HC",
+          "name": "NocoDB teste"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "nocoDbApiToken",
+        "operation": "update",
+        "workspaceId": {
+          "__rl": true,
+          "value": "wafwewrc",
+          "mode": "list",
+          "cachedResultName": "Default Workspace",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc"
+        },
+        "projectId": {
+          "__rl": true,
+          "value": "pjogoy8peb1cou2",
+          "mode": "list",
+          "cachedResultName": "ORIGEM",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc/pjogoy8peb1cou2"
+        },
+        "table": {
+          "__rl": true,
+          "value": "m5jo2xh4ovkb3ld",
+          "mode": "list",
+          "cachedResultName": "Chamados",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc/pjogoy8peb1cou2/m5jo2xh4ovkb3ld"
+        },
+        "id": "={{ $('cod_chamado').item.json.Id }}",
+        "fieldsMapper": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "cod_chamado": "={{ $('cod_chamado').item.json.cod_chamado }}",
+            "setor_solicitante": "={{ $('Execute a SQL query').item.json.setor_solicitante }}",
+            "Nome_solicitante": "={{ $('Execute a SQL query').item.json.funcionario }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "email_solicitante",
+              "displayName": "email_solicitante",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "setor_responsavel",
+              "displayName": "setor_responsavel",
+              "type": "options",
+              "options": [
+                {
+                  "name": "TI",
+                  "value": "TI"
+                },
+                {
+                  "name": "RH",
+                  "value": "RH"
+                },
+                {
+                  "name": "FINANCEIRO",
+                  "value": "FINANCEIRO"
+                },
+                {
+                  "name": "COMPRAS",
+                  "value": "COMPRAS"
+                },
+                {
+                  "name": "LOGISTICA",
+                  "value": "LOGISTICA"
+                }
+              ],
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Categoria",
+              "displayName": "Categoria",
+              "type": "options",
+              "options": [
+                {
+                  "name": "Suporte de Hardware",
+                  "value": "Suporte de Hardware"
+                },
+                {
+                  "name": "Acesso a Sistemas",
+                  "value": "Acesso a Sistemas"
+                },
+                {
+                  "name": "Instalação/Atualização de Softwares",
+                  "value": "Instalação/Atualização de Softwares"
+                },
+                {
+                  "name": "Problemas de Rede e Internet",
+                  "value": "Problemas de Rede e Internet"
+                },
+                {
+                  "name": "Telefonia e Ramais",
+                  "value": "Telefonia e Ramais"
+                },
+                {
+                  "name": "Dúvidas sobre Folha de Pagamento",
+                  "value": "Dúvidas sobre Folha de Pagamento"
+                },
+                {
+                  "name": "Solicitação/Alteração de Férias",
+                  "value": "Solicitação/Alteração de Férias"
+                },
+                {
+                  "name": "Envio de Atestados Médicos",
+                  "value": "Envio de Atestados Médicos"
+                },
+                {
+                  "name": "Processo de Integração",
+                  "value": "Processo de Integração"
+                },
+                {
+                  "name": "Benefícios",
+                  "value": "Benefícios"
+                },
+                {
+                  "name": "Reembolso de Despesas",
+                  "value": "Reembolso de Despesas"
+                },
+                {
+                  "name": "Pagamento de Fornecedores",
+                  "value": "Pagamento de Fornecedores"
+                },
+                {
+                  "name": "Emissão de Notas Fiscais",
+                  "value": "Emissão de Notas Fiscais"
+                },
+                {
+                  "name": "Adiantamentos de Viagem",
+                  "value": "Adiantamentos de Viagem"
+                },
+                {
+                  "name": "Cobranças e Conciliação Bancária",
+                  "value": "Cobranças e Conciliação Bancária"
+                },
+                {
+                  "name": "Solicitação de Novos Equipamentos/Licenças",
+                  "value": "Solicitação de Novos Equipamentos/Licenças"
+                },
+                {
+                  "name": "Compra de Insumos de Escritório",
+                  "value": "Compra de Insumos de Escritório"
+                },
+                {
+                  "name": "Cotação com Fornecedores",
+                  "value": "Cotação com Fornecedores"
+                },
+                {
+                  "name": "Renovação de Contratos de Serviços",
+                  "value": "Renovação de Contratos de Serviços"
+                },
+                {
+                  "name": "Cadastro de Novos Fornecedores",
+                  "value": "Cadastro de Novos Fornecedores"
+                },
+                {
+                  "name": "Agendamento de Coletas e Entregas",
+                  "value": "Agendamento de Coletas e Entregas"
+                },
+                {
+                  "name": "Rastreamento de Encomendas",
+                  "value": "Rastreamento de Encomendas"
+                },
+                {
+                  "name": "Problemas com Frota/Transporte",
+                  "value": "Problemas com Frota/Transporte"
+                },
+                {
+                  "name": "Divergência de Inventário/Estoque",
+                  "value": "Divergência de Inventário/Estoque"
+                },
+                {
+                  "name": "Recebimento de Mercadorias",
+                  "value": "Recebimento de Mercadorias"
+                },
+                {
+                  "name": "Outros",
+                  "value": "Outros"
+                }
+              ],
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "type": "options",
+              "options": [
+                {
+                  "name": "Aberto",
+                  "value": "Aberto"
+                },
+                {
+                  "name": "Em Análise",
+                  "value": "Em Análise"
+                },
+                {
+                  "name": "Em Andamento",
+                  "value": "Em Andamento"
+                },
+                {
+                  "name": "Finalizado",
+                  "value": "Finalizado"
+                },
+                {
+                  "name": "Cancelado",
+                  "value": "Cancelado"
+                }
+              ],
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "cod_chamado",
+              "displayName": "cod_chamado",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "email_responsavel",
+              "displayName": "email_responsavel",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Descrição",
+              "displayName": "Descrição",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Atestado",
+              "displayName": "Atestado",
+              "type": "array",
+              "display": true,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "dataCadastro",
+              "displayName": "dataCadastro",
+              "type": "dateTime",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "dataAtualiza",
+              "displayName": "dataAtualiza",
+              "type": "dateTime",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "setor_solicitante",
+              "displayName": "setor_solicitante",
+              "type": "options",
+              "options": [
+                {
+                  "name": "TI",
+                  "value": "TI"
+                },
+                {
+                  "name": "RH",
+                  "value": "RH"
+                },
+                {
+                  "name": "FINANCEIRO",
+                  "value": "FINANCEIRO"
+                },
+                {
+                  "name": "COMPRAS",
+                  "value": "COMPRAS"
+                },
+                {
+                  "name": "LOGISTICA",
+                  "value": "LOGISTICA"
+                }
+              ],
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Nome_solicitante",
+              "displayName": "Nome_solicitante",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "nome_responsavel",
+              "displayName": "nome_responsavel",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        }
+      },
+      "type": "n8n-nodes-base.nocoDb",
+      "typeVersion": 4,
+      "position": [
+        848,
+        368
+      ],
+      "id": "82e546df-9596-42aa-99d4-f70c8f9afdba",
+      "name": "cod_chamado_COMPRAS",
+      "credentials": {
+        "nocoDbApiToken": {
+          "id": "VxfQf3JiyXF064HC",
+          "name": "NocoDB teste"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "nocoDbApiToken",
+        "operation": "update",
+        "workspaceId": {
+          "__rl": true,
+          "value": "wafwewrc",
+          "mode": "list",
+          "cachedResultName": "Default Workspace",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc"
+        },
+        "projectId": {
+          "__rl": true,
+          "value": "pjogoy8peb1cou2",
+          "mode": "list",
+          "cachedResultName": "ORIGEM",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc/pjogoy8peb1cou2"
+        },
+        "table": {
+          "__rl": true,
+          "value": "m5jo2xh4ovkb3ld",
+          "mode": "list",
+          "cachedResultName": "Chamados",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc/pjogoy8peb1cou2/m5jo2xh4ovkb3ld"
+        },
+        "id": "={{ $('cod_chamado').item.json.Id }}",
+        "fieldsMapper": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Nome_solicitante": "={{ $('Execute a SQL query').item.json.funcionario }}",
+            "setor_solicitante": "={{ $('Execute a SQL query').item.json.setor_solicitante }}",
+            "cod_chamado": "={{ $('cod_chamado').item.json.cod_chamado }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "email_solicitante",
+              "displayName": "email_solicitante",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "setor_responsavel",
+              "displayName": "setor_responsavel",
+              "type": "options",
+              "options": [
+                {
+                  "name": "TI",
+                  "value": "TI"
+                },
+                {
+                  "name": "RH",
+                  "value": "RH"
+                },
+                {
+                  "name": "FINANCEIRO",
+                  "value": "FINANCEIRO"
+                },
+                {
+                  "name": "COMPRAS",
+                  "value": "COMPRAS"
+                },
+                {
+                  "name": "LOGISTICA",
+                  "value": "LOGISTICA"
+                }
+              ],
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Categoria",
+              "displayName": "Categoria",
+              "type": "options",
+              "options": [
+                {
+                  "name": "Suporte de Hardware",
+                  "value": "Suporte de Hardware"
+                },
+                {
+                  "name": "Acesso a Sistemas",
+                  "value": "Acesso a Sistemas"
+                },
+                {
+                  "name": "Instalação/Atualização de Softwares",
+                  "value": "Instalação/Atualização de Softwares"
+                },
+                {
+                  "name": "Problemas de Rede e Internet",
+                  "value": "Problemas de Rede e Internet"
+                },
+                {
+                  "name": "Telefonia e Ramais",
+                  "value": "Telefonia e Ramais"
+                },
+                {
+                  "name": "Dúvidas sobre Folha de Pagamento",
+                  "value": "Dúvidas sobre Folha de Pagamento"
+                },
+                {
+                  "name": "Solicitação/Alteração de Férias",
+                  "value": "Solicitação/Alteração de Férias"
+                },
+                {
+                  "name": "Envio de Atestados Médicos",
+                  "value": "Envio de Atestados Médicos"
+                },
+                {
+                  "name": "Processo de Integração",
+                  "value": "Processo de Integração"
+                },
+                {
+                  "name": "Benefícios",
+                  "value": "Benefícios"
+                },
+                {
+                  "name": "Reembolso de Despesas",
+                  "value": "Reembolso de Despesas"
+                },
+                {
+                  "name": "Pagamento de Fornecedores",
+                  "value": "Pagamento de Fornecedores"
+                },
+                {
+                  "name": "Emissão de Notas Fiscais",
+                  "value": "Emissão de Notas Fiscais"
+                },
+                {
+                  "name": "Adiantamentos de Viagem",
+                  "value": "Adiantamentos de Viagem"
+                },
+                {
+                  "name": "Cobranças e Conciliação Bancária",
+                  "value": "Cobranças e Conciliação Bancária"
+                },
+                {
+                  "name": "Solicitação de Novos Equipamentos/Licenças",
+                  "value": "Solicitação de Novos Equipamentos/Licenças"
+                },
+                {
+                  "name": "Compra de Insumos de Escritório",
+                  "value": "Compra de Insumos de Escritório"
+                },
+                {
+                  "name": "Cotação com Fornecedores",
+                  "value": "Cotação com Fornecedores"
+                },
+                {
+                  "name": "Renovação de Contratos de Serviços",
+                  "value": "Renovação de Contratos de Serviços"
+                },
+                {
+                  "name": "Cadastro de Novos Fornecedores",
+                  "value": "Cadastro de Novos Fornecedores"
+                },
+                {
+                  "name": "Agendamento de Coletas e Entregas",
+                  "value": "Agendamento de Coletas e Entregas"
+                },
+                {
+                  "name": "Rastreamento de Encomendas",
+                  "value": "Rastreamento de Encomendas"
+                },
+                {
+                  "name": "Problemas com Frota/Transporte",
+                  "value": "Problemas com Frota/Transporte"
+                },
+                {
+                  "name": "Divergência de Inventário/Estoque",
+                  "value": "Divergência de Inventário/Estoque"
+                },
+                {
+                  "name": "Recebimento de Mercadorias",
+                  "value": "Recebimento de Mercadorias"
+                },
+                {
+                  "name": "Outros",
+                  "value": "Outros"
+                }
+              ],
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "type": "options",
+              "options": [
+                {
+                  "name": "Aberto",
+                  "value": "Aberto"
+                },
+                {
+                  "name": "Em Análise",
+                  "value": "Em Análise"
+                },
+                {
+                  "name": "Em Andamento",
+                  "value": "Em Andamento"
+                },
+                {
+                  "name": "Finalizado",
+                  "value": "Finalizado"
+                },
+                {
+                  "name": "Cancelado",
+                  "value": "Cancelado"
+                }
+              ],
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "cod_chamado",
+              "displayName": "cod_chamado",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "email_responsavel",
+              "displayName": "email_responsavel",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Descrição",
+              "displayName": "Descrição",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Atestado",
+              "displayName": "Atestado",
+              "type": "array",
+              "display": true,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "dataCadastro",
+              "displayName": "dataCadastro",
+              "type": "dateTime",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "dataAtualiza",
+              "displayName": "dataAtualiza",
+              "type": "dateTime",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "setor_solicitante",
+              "displayName": "setor_solicitante",
+              "type": "options",
+              "options": [
+                {
+                  "name": "TI",
+                  "value": "TI"
+                },
+                {
+                  "name": "RH",
+                  "value": "RH"
+                },
+                {
+                  "name": "FINANCEIRO",
+                  "value": "FINANCEIRO"
+                },
+                {
+                  "name": "COMPRAS",
+                  "value": "COMPRAS"
+                },
+                {
+                  "name": "LOGISTICA",
+                  "value": "LOGISTICA"
+                }
+              ],
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Nome_solicitante",
+              "displayName": "Nome_solicitante",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "nome_responsavel",
+              "displayName": "nome_responsavel",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        }
+      },
+      "type": "n8n-nodes-base.nocoDb",
+      "typeVersion": 4,
+      "position": [
+        848,
+        576
+      ],
+      "id": "ea00f7a5-fe11-4adc-9328-e77cad19544a",
+      "name": "cod_chamado_LOGISTICA",
+      "credentials": {
+        "nocoDbApiToken": {
+          "id": "VxfQf3JiyXF064HC",
+          "name": "NocoDB teste"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "nocoDbApiToken",
+        "operation": "create",
+        "workspaceId": {
+          "__rl": true,
+          "value": "wafwewrc",
+          "mode": "list",
+          "cachedResultName": "Default Workspace",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc"
+        },
+        "projectId": {
+          "__rl": true,
+          "value": "pwos6cslx1r68zc",
+          "mode": "list",
+          "cachedResultName": "RH",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc/pwos6cslx1r68zc"
+        },
+        "table": {
+          "__rl": true,
+          "value": "m2er4fngi7vnerv",
+          "mode": "list",
+          "cachedResultName": "Chamados RH",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc/pwos6cslx1r68zc/m2er4fngi7vnerv"
+        },
+        "fieldsMapper": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "id_chamadoOrigem": "={{ $json.id }}",
+            "email_solicitante": "={{ $json.fields.email_solicitante }}",
+            "Setor": "={{ $json.fields.setor_solicitante }}",
+            "Categoria": "={{ $json.fields.Categoria }}",
+            "Status": "={{ $json.fields.Status }}",
+            "cod_chamado": "={{ $json.fields.cod_chamado }}",
+            "Descrição": "={{ $json.fields[\"Descrição\"] }}",
+            "dataCadastro": "={{ $json.fields.dataCadastro }}",
+            "Nome_solicitante": "={{ $json.fields.Nome_solicitante }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "email_solicitante",
+              "displayName": "email_solicitante",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Setor",
+              "displayName": "Setor",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Categoria",
+              "displayName": "Categoria",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "type": "options",
+              "options": [
+                {
+                  "name": "Aberto",
+                  "value": "Aberto"
+                },
+                {
+                  "name": "Em Análise",
+                  "value": "Em Análise"
+                },
+                {
+                  "name": "Em Andamento",
+                  "value": "Em Andamento"
+                },
+                {
+                  "name": "Finalizado",
+                  "value": "Finalizado"
+                },
+                {
+                  "name": "Cancelado",
+                  "value": "Cancelado"
+                }
+              ],
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "cod_chamado",
+              "displayName": "cod_chamado",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "email_responsavel",
+              "displayName": "email_responsavel",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Descrição",
+              "displayName": "Descrição",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Atestado",
+              "displayName": "Atestado",
+              "type": "array",
+              "display": true,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "id_chamadoOrigem",
+              "displayName": "id_chamadoOrigem",
+              "type": "number",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "dataCadastro",
+              "displayName": "dataCadastro",
+              "type": "dateTime",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "dataAtualiza",
+              "displayName": "dataAtualiza",
+              "type": "dateTime",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Nome_solicitante",
+              "displayName": "Nome_solicitante",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "nome_responsavel",
+              "displayName": "nome_responsavel",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        }
+      },
+      "type": "n8n-nodes-base.nocoDb",
+      "typeVersion": 4,
+      "position": [
+        1072,
+        -32
+      ],
+      "id": "12d5b590-5858-45a2-bc16-710c80df28be",
+      "name": "insert_RH",
+      "credentials": {
+        "nocoDbApiToken": {
+          "id": "VxfQf3JiyXF064HC",
+          "name": "NocoDB teste"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "nocoDbApiToken",
+        "operation": "create",
+        "workspaceId": {
+          "__rl": true,
+          "value": "wafwewrc",
+          "mode": "list",
+          "cachedResultName": "Default Workspace",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc"
+        },
+        "projectId": {
+          "__rl": true,
+          "value": "pbg69grv4xfjtj7",
+          "mode": "list",
+          "cachedResultName": "FINANCEIRO",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc/pbg69grv4xfjtj7"
+        },
+        "table": {
+          "__rl": true,
+          "value": "mqgmgalftq47rx7",
+          "mode": "list",
+          "cachedResultName": "Chamados Financeiro",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc/pbg69grv4xfjtj7/mqgmgalftq47rx7"
+        },
+        "fieldsMapper": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "id_chamadoOrigem": "={{ $json.id }}",
+            "email_solicitante": "={{ $json.fields.email_solicitante }}",
+            "Setor": "={{ $json.fields.setor_solicitante }}",
+            "Categoria": "={{ $json.fields.Categoria }}",
+            "Status": "={{ $json.fields.Status }}",
+            "cod_chamado": "={{ $json.fields.cod_chamado }}",
+            "Descrição": "={{ $json.fields[\"Descrição\"] }}",
+            "dataCadastro": "={{ $json.fields.dataCadastro }}",
+            "Nome_solicitante": "={{ $json.fields.Nome_solicitante }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "email_solicitante",
+              "displayName": "email_solicitante",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Setor",
+              "displayName": "Setor",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Categoria",
+              "displayName": "Categoria",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "type": "options",
+              "options": [
+                {
+                  "name": "Aberto",
+                  "value": "Aberto"
+                },
+                {
+                  "name": "Em Análise",
+                  "value": "Em Análise"
+                },
+                {
+                  "name": "Em Andamento",
+                  "value": "Em Andamento"
+                },
+                {
+                  "name": "Finalizado",
+                  "value": "Finalizado"
+                },
+                {
+                  "name": "Cancelado",
+                  "value": "Cancelado"
+                }
+              ],
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "cod_chamado",
+              "displayName": "cod_chamado",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "email_responsavel",
+              "displayName": "email_responsavel",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Descrição",
+              "displayName": "Descrição",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "id_chamadoOrigem",
+              "displayName": "id_chamadoOrigem",
+              "type": "number",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "dataCadastro",
+              "displayName": "dataCadastro",
+              "type": "dateTime",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "dataAtualiza",
+              "displayName": "dataAtualiza",
+              "type": "dateTime",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Nome_solicitante",
+              "displayName": "Nome_solicitante",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Nome_responsavel",
+              "displayName": "Nome_responsavel",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        }
+      },
+      "type": "n8n-nodes-base.nocoDb",
+      "typeVersion": 4,
+      "position": [
+        1072,
+        160
+      ],
+      "id": "cdef83d8-e8fd-4739-9388-c5cee620358f",
+      "name": "insert_FINANCEIRO",
+      "credentials": {
+        "nocoDbApiToken": {
+          "id": "VxfQf3JiyXF064HC",
+          "name": "NocoDB teste"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "nocoDbApiToken",
+        "operation": "create",
+        "workspaceId": {
+          "__rl": true,
+          "value": "wafwewrc",
+          "mode": "list",
+          "cachedResultName": "Default Workspace",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc"
+        },
+        "projectId": {
+          "__rl": true,
+          "value": "pcs2nyy97abbviu",
+          "mode": "list",
+          "cachedResultName": "COMPRAS",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc/pcs2nyy97abbviu"
+        },
+        "table": {
+          "__rl": true,
+          "value": "mjqp2u9510mshht",
+          "mode": "list",
+          "cachedResultName": "Chamados Compras",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc/pcs2nyy97abbviu/mjqp2u9510mshht"
+        },
+        "fieldsMapper": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "id_chamadoOrigem": "={{ $json.id }}",
+            "email_solicitante": "={{ $json.fields.email_solicitante }}",
+            "Setor": "={{ $json.fields.setor_solicitante }}",
+            "Categoria": "={{ $json.fields.Categoria }}",
+            "Status": "={{ $json.fields.Status }}",
+            "cod_chamado": "={{ $json.fields.cod_chamado }}",
+            "Descrição": "={{ $json.fields[\"Descrição\"] }}",
+            "dataCadastro": "={{ $json.fields.dataCadastro }}",
+            "Nome_solicitante": "={{ $json.fields.Nome_solicitante }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "email_solicitante",
+              "displayName": "email_solicitante",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Setor",
+              "displayName": "Setor",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Categoria",
+              "displayName": "Categoria",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "type": "options",
+              "options": [
+                {
+                  "name": "Aberto",
+                  "value": "Aberto"
+                },
+                {
+                  "name": "Em Análise",
+                  "value": "Em Análise"
+                },
+                {
+                  "name": "Em Andamento",
+                  "value": "Em Andamento"
+                },
+                {
+                  "name": "Finalizado",
+                  "value": "Finalizado"
+                },
+                {
+                  "name": "Cancelado",
+                  "value": "Cancelado"
+                }
+              ],
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "cod_chamado",
+              "displayName": "cod_chamado",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "email_responsavel",
+              "displayName": "email_responsavel",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Descrição",
+              "displayName": "Descrição",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "id_chamadoOrigem",
+              "displayName": "id_chamadoOrigem",
+              "type": "number",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "dataCadastro",
+              "displayName": "dataCadastro",
+              "type": "dateTime",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "dataAtualiza",
+              "displayName": "dataAtualiza",
+              "type": "dateTime",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Nome_solicitante",
+              "displayName": "Nome_solicitante",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Nome_responsavel",
+              "displayName": "Nome_responsavel",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        }
+      },
+      "type": "n8n-nodes-base.nocoDb",
+      "typeVersion": 4,
+      "position": [
+        1072,
+        368
+      ],
+      "id": "d963d455-69f0-446a-a24d-4eee26253c7d",
+      "name": "INSERT_COMPRAS",
+      "credentials": {
+        "nocoDbApiToken": {
+          "id": "VxfQf3JiyXF064HC",
+          "name": "NocoDB teste"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "nocoDbApiToken",
+        "operation": "create",
+        "workspaceId": {
+          "__rl": true,
+          "value": "wafwewrc",
+          "mode": "list",
+          "cachedResultName": "Default Workspace",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc"
+        },
+        "projectId": {
+          "__rl": true,
+          "value": "pv3k8gkumon1kb3",
+          "mode": "list",
+          "cachedResultName": "LOGISTICA",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc/pv3k8gkumon1kb3"
+        },
+        "table": {
+          "__rl": true,
+          "value": "mk5pf8eb6k7oj38",
+          "mode": "list",
+          "cachedResultName": "Chamados Logistica",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc/pv3k8gkumon1kb3/mk5pf8eb6k7oj38"
+        },
+        "fieldsMapper": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "id_chamadoOrigem": "={{ $json.id }}",
+            "email_solicitante": "={{ $json.fields.email_solicitante }}",
+            "Setor": "={{ $json.fields.setor_solicitante }}",
+            "Categoria": "={{ $json.fields.Categoria }}",
+            "Status": "={{ $json.fields.Status }}",
+            "cod_chamado": "={{ $json.fields.cod_chamado }}",
+            "Descrição": "={{ $json.fields[\"Descrição\"] }}",
+            "dataCadastro": "={{ $json.fields.dataCadastro }}",
+            "Nome_solicitante": "={{ $json.fields.Nome_solicitante }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "email_solicitante",
+              "displayName": "email_solicitante",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Setor",
+              "displayName": "Setor",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Categoria",
+              "displayName": "Categoria",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "type": "options",
+              "options": [
+                {
+                  "name": "Aberto",
+                  "value": "Aberto"
+                },
+                {
+                  "name": "Em Análise",
+                  "value": "Em Análise"
+                },
+                {
+                  "name": "Em Andamento",
+                  "value": "Em Andamento"
+                },
+                {
+                  "name": "Finalizado",
+                  "value": "Finalizado"
+                },
+                {
+                  "name": "Cancelado",
+                  "value": "Cancelado"
+                }
+              ],
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "cod_chamado",
+              "displayName": "cod_chamado",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "email_responsavel",
+              "displayName": "email_responsavel",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Descrição",
+              "displayName": "Descrição",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "id_chamadoOrigem",
+              "displayName": "id_chamadoOrigem",
+              "type": "number",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "dataCadastro",
+              "displayName": "dataCadastro",
+              "type": "dateTime",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "dataAtualiza",
+              "displayName": "dataAtualiza",
+              "type": "dateTime",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Nome_solicitante",
+              "displayName": "Nome_solicitante",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "nome_responsavel",
+              "displayName": "nome_responsavel",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        }
+      },
+      "type": "n8n-nodes-base.nocoDb",
+      "typeVersion": 4,
+      "position": [
+        1072,
+        576
+      ],
+      "id": "0cd8e9d0-fe66-4c08-8cba-df94cd30555c",
+      "name": "insert_LOGISTICA",
+      "credentials": {
+        "nocoDbApiToken": {
+          "id": "VxfQf3JiyXF064HC",
+          "name": "NocoDB teste"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $('cod_chamado').item.json.setor_responsavel }}",
+                    "rightValue": "TI",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "c5300676-180f-4fb1-9b9a-48648ed7fece"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "873cab85-179e-46c5-b106-d3a3de6bb37c",
+                    "leftValue": "={{ $('cod_chamado').item.json.setor_responsavel }}",
+                    "rightValue": "RH",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "bcb39c9e-aeed-4024-9440-d1bc342ca088",
+                    "leftValue": "={{ $('cod_chamado').item.json.setor_responsavel }}",
+                    "rightValue": "FINANCEIRO",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "338aec5c-1aea-4381-8735-706a379b7902",
+                    "leftValue": "={{ $('cod_chamado').item.json.setor_responsavel }}",
+                    "rightValue": "COMPRAS",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "fa1d239a-29f6-4ea4-a59b-cfe3f8e9d6c2",
+                    "leftValue": "={{ $('cod_chamado').item.json.setor_responsavel }}",
+                    "rightValue": "LOGISTICA",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        608,
+        112
+      ],
+      "id": "d44c06ff-85bf-423b-a731-7c9132970642",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Pega o ID que veio no payload do NocoDB\nconst id = $input.first().json.body.data.rows[0].Id;\nconst email_solicitante = $input.first().json.body.data.rows[0].email_solicitante;\nconst setor_responsavel = $input.first().json.body.data.rows[0].setor_responsavel;\nconst categoria = $input.first().json.body.data.rows[0].Categoria;\nconst status = $input.first().json.body.data.rows[0].Status;\nconst descricao = $input.first().json.body.data.rows[0][\"Descrição\"];\nconst atestado = $input.first().json.body.data.rows[0].Atestado\n\n// Lista de caracteres permitidos para a parte aleatória (letras e números)\nconst chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@*';\nlet randomStr = '';\n\n// Gera 10 caracteres aleatórios\nfor (let i = 0; i < 10; i++) {\n  randomStr += chars.charAt(Math.floor(Math.random() * chars.length));\n}\n\n// Monta o código final \nconst cod_chamado = `CHA-${randomStr}${id}`;\n\n// Retorna as variáveis prontas para o nó do NocoDB\nreturn {\n  Id: id,\n  cod_chamado: cod_chamado,\n  email_solicitante: email_solicitante,\n  setor_responsavel: setor_responsavel,\n  categoria: categoria,\n  status: status,\n  descricao: descricao,\n  atestado: atestado\n\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        160,
+        160
+      ],
+      "id": "37e16bf0-439f-453d-be0a-5211a9fe2a59",
+      "name": "cod_chamado"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "19b90ff5-0d0b-4118-8530-c3cfd109f4a6",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -64,
+        160
+      ],
+      "id": "55a1f4ce-826a-408a-81f0-6b66bb199f8c",
+      "name": "Webhook",
+      "webhookId": "19b90ff5-0d0b-4118-8530-c3cfd109f4a6"
+    },
+    {
+      "parameters": {
+        "fromEmail": "sdf",
+        "toEmail": "asd",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        1616,
+        160
+      ],
+      "id": "51999cdd-2423-46d7-a28b-3a0a1eb61155",
+      "name": "Cadastro chamado",
+      "webhookId": "3abbc751-5dfc-407f-846c-4616ab4c717e",
+      "credentials": {
+        "smtp": {
+          "id": "kAK9w2Fn6T4ljVXk",
+          "name": "SMTP account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "nocoDbApiToken",
+        "operation": "create",
+        "workspaceId": {
+          "__rl": true,
+          "value": "wafwewrc",
+          "mode": "list",
+          "cachedResultName": "Default Workspace",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc"
+        },
+        "projectId": {
+          "__rl": true,
+          "value": "pqkux29obztqfhf",
+          "mode": "list",
+          "cachedResultName": "TI",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc/pqkux29obztqfhf"
+        },
+        "table": {
+          "__rl": true,
+          "value": "mpx7xtld3ggbqlu",
+          "mode": "list",
+          "cachedResultName": "Chamados TI",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc/pqkux29obztqfhf/mpx7xtld3ggbqlu"
+        },
+        "fieldsMapper": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "id_chamadoOrigem": "={{ $json.id }}",
+            "Descrição": "={{ $json.fields[\"Descrição\"] }}",
+            "dataCadastro": "={{ $json.fields.dataCadastro }}",
+            "cod_chamado": "={{ $json.fields.cod_chamado }}",
+            "Status": "={{ $json.fields.Status }}",
+            "Categoria": "={{ $json.fields.Categoria }}",
+            "Nome_solicitante": "={{ $json.fields.Nome_solicitante }}",
+            "Setor": "={{ $json.fields.setor_solicitante }}",
+            "email_solicitante": "={{ $json.fields.email_solicitante }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "email_solicitante",
+              "displayName": "email_solicitante",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Setor",
+              "displayName": "Setor",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Categoria",
+              "displayName": "Categoria",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "type": "options",
+              "options": [
+                {
+                  "name": "Aberto",
+                  "value": "Aberto"
+                },
+                {
+                  "name": "Em Análise",
+                  "value": "Em Análise"
+                },
+                {
+                  "name": "Em Andamento",
+                  "value": "Em Andamento"
+                },
+                {
+                  "name": "Finalizado",
+                  "value": "Finalizado"
+                },
+                {
+                  "name": "Cancelado",
+                  "value": "Cancelado"
+                }
+              ],
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "cod_chamado",
+              "displayName": "cod_chamado",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "email_responsavel",
+              "displayName": "email_responsavel",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Descrição",
+              "displayName": "Descrição",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "id_chamadoOrigem",
+              "displayName": "id_chamadoOrigem",
+              "type": "number",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "dataCadastro",
+              "displayName": "dataCadastro",
+              "type": "dateTime",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "dataAtualiza",
+              "displayName": "dataAtualiza",
+              "type": "dateTime",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Nome_solicitante",
+              "displayName": "Nome_solicitante",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Nome_responsavel",
+              "displayName": "Nome_responsavel",
+              "type": "string",
+              "display": true,
+              "defaultMatch": false,
+              "readOnly": false,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        }
+      },
+      "type": "n8n-nodes-base.nocoDb",
+      "typeVersion": 4,
+      "position": [
+        1072,
+        -208
+      ],
+      "id": "88775906-e1a4-476d-9e94-6f33abc4965d",
+      "name": "insert_TI",
+      "credentials": {
+        "nocoDbApiToken": {
+          "id": "VxfQf3JiyXF064HC",
+          "name": "NocoDB teste"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "select df.funcionario, ds.setor as setor_solicitante from core.dm_funcionario df join core.dm_setor ds \non df.sk_cod_setor = ds.sk_cod_setor\nwhere df.email = '{{ $json.email_solicitante }}'",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.7,
+      "position": [
+        368,
+        160
+      ],
+      "id": "c8b0f737-e37b-40a7-be17-3b698c0b7614",
+      "name": "Execute a SQL query",
+      "executeOnce": true,
+      "credentials": {
+        "postgres": {
+          "id": "RZP2mFkBmaXZrjBN",
+          "name": "Postgres account 2"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "cod_chamado_TI": {
+      "main": [
+        [
+          {
+            "node": "insert_TI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cod_chamado_RH": {
+      "main": [
+        [
+          {
+            "node": "insert_RH",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cod_chamado_FINANCEIRO": {
+      "main": [
+        [
+          {
+            "node": "insert_FINANCEIRO",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cod_chamado_COMPRAS": {
+      "main": [
+        [
+          {
+            "node": "INSERT_COMPRAS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cod_chamado_LOGISTICA": {
+      "main": [
+        [
+          {
+            "node": "insert_LOGISTICA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "cod_chamado_TI",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "cod_chamado_RH",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "cod_chamado_FINANCEIRO",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "cod_chamado_COMPRAS",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "cod_chamado_LOGISTICA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cod_chamado": {
+      "main": [
+        [
+          {
+            "node": "Execute a SQL query",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "cod_chamado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_RH": {
+      "main": [
+        [
+          {
+            "node": "Cadastro chamado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_FINANCEIRO": {
+      "main": [
+        [
+          {
+            "node": "Cadastro chamado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "INSERT_COMPRAS": {
+      "main": [
+        [
+          {
+            "node": "Cadastro chamado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_LOGISTICA": {
+      "main": [
+        [
+          {
+            "node": "Cadastro chamado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_TI": {
+      "main": [
+        [
+          {
+            "node": "Cadastro chamado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute a SQL query": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "ba344298-8077-46ea-9016-e98a6003f6a6",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "58912c12ebd5040be480a3d10cd3c6ce2cf0867efbb1472379ca9ba2a85af90a"
+  },
+  "nodeGroups": [],
+  "id": "jLXW0gsHravC6LcW",
+  "tags": []
+}
