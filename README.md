@@ -3,6 +3,7 @@
 ![status](https://img.shields.io/badge/status-Em_andamento-brightgreen)
 <a href=""><img src="https://img.shields.io/badge/Github-repo-blue?logo=github" alt="Github"/></a>
 <a href="https://n8n.io/"><img src="https://img.shields.io/badge/N8N-Tech-blue?logo=n8n" alt="N8N"/></a>
+<a href="https://www.postgresql.org/"><img src="https://img.shields.io/badge/Postgres-Database-blue?logo=postgres" alt="Postgres"/></a>
 
 <a href="https://n8n.io/"><img src="https://img.shields.io/badge/Tech-N8N-blue" alt="N8N"/></a>
 <a href="https://www.postgresql.org/"><img src="https://img.shields.io/badge/Database-postgresql-blue" alt="Postgres"/></a>
