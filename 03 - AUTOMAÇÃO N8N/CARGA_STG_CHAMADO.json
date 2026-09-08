@@ -1,0 +1,345 @@
+{
+  "name": "CARGA_STG_CHAMADO",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -224,
+        0
+      ],
+      "id": "514521e0-2f66-4675-ba67-e2ab7274a859",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "operation": "deleteTable",
+        "schema": {
+          "__rl": true,
+          "value": "stage",
+          "mode": "list",
+          "cachedResultName": "stage"
+        },
+        "table": {
+          "__rl": true,
+          "value": "stg_chamado",
+          "mode": "list",
+          "cachedResultName": "stg_chamado"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.7,
+      "position": [
+        -16,
+        0
+      ],
+      "id": "eb106327-33af-4921-bba1-ac42de5ceeab",
+      "name": "Truncate chamado",
+      "credentials": {
+        "postgres": {
+          "id": "RZP2mFkBmaXZrjBN",
+          "name": "Postgres account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "nocoDbApiToken",
+        "operation": "search",
+        "workspaceId": {
+          "__rl": true,
+          "value": "wafwewrc",
+          "mode": "list",
+          "cachedResultName": "Default Workspace",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc"
+        },
+        "projectId": {
+          "__rl": true,
+          "value": "pjogoy8peb1cou2",
+          "mode": "list",
+          "cachedResultName": "ORIGEM",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc/pjogoy8peb1cou2"
+        },
+        "table": {
+          "__rl": true,
+          "value": "m5jo2xh4ovkb3ld",
+          "mode": "list",
+          "cachedResultName": "Chamados",
+          "cachedResultUrl": "http://192.168.0.144:30183//#/wafwewrc/pjogoy8peb1cou2/m5jo2xh4ovkb3ld"
+        },
+        "returnAll": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.nocoDb",
+      "typeVersion": 4,
+      "position": [
+        192,
+        0
+      ],
+      "id": "29b2de87-b948-4672-8171-174a507c8867",
+      "name": "Select Chamado",
+      "credentials": {
+        "nocoDbApiToken": {
+          "id": "VxfQf3JiyXF064HC",
+          "name": "NocoDB teste"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "schema": {
+          "__rl": true,
+          "value": "stage",
+          "mode": "list",
+          "cachedResultName": "stage"
+        },
+        "table": {
+          "__rl": true,
+          "value": "stg_chamado",
+          "mode": "list",
+          "cachedResultName": "stg_chamado"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "atestado": "={{ $json.fields.Atestado !== null }}",
+            "cod_chamado": "={{ $json.fields.cod_chamado }}",
+            "funcionario_solicitante": "={{ $json.fields.Nome_solicitante }}",
+            "email_solicitante": "={{ $json.fields.email_solicitante }}",
+            "setor_solicitante": "={{ $json.fields.setor_solicitante }}",
+            "setor_responsavel": "={{ $json.fields.setor_responsavel }}",
+            "categoria": "={{ $json.fields.Categoria }}",
+            "status": "={{ $json.fields.Status }}",
+            "funcionario_responsavel": "={{ $json.fields.nome_responsavel }}",
+            "email_responsavel": "={{ $json.fields.email_responsavel }}",
+            "descricao": "={{ $json.fields[\"Descrição\"] }}",
+            "datacadastro": "={{ $json.fields.dataCadastro }}",
+            "dataatualiza": "={{ $json.fields.dataAtualiza }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "cod_chamado",
+              "displayName": "cod_chamado",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "funcionario_solicitante",
+              "displayName": "funcionario_solicitante",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "email_solicitante",
+              "displayName": "email_solicitante",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "setor_solicitante",
+              "displayName": "setor_solicitante",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "setor_responsavel",
+              "displayName": "setor_responsavel",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "categoria",
+              "displayName": "categoria",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "status",
+              "displayName": "status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "funcionario_responsavel",
+              "displayName": "funcionario_responsavel",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "email_responsavel",
+              "displayName": "email_responsavel",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "descricao",
+              "displayName": "descricao",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "atestado",
+              "displayName": "atestado",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "boolean",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "datacadastro",
+              "displayName": "datacadastro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "dateTime",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "dataatualiza",
+              "displayName": "dataatualiza",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "dateTime",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "etl_versao",
+              "displayName": "etl_versao",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "etl_dt_carga",
+              "displayName": "etl_dt_carga",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "dateTime",
+              "canBeUsedToMatch": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.7,
+      "position": [
+        400,
+        0
+      ],
+      "id": "4da5fc1c-6829-47d2-9e03-c0578fc4a5bb",
+      "name": "Insert_stg_chamado",
+      "credentials": {
+        "postgres": {
+          "id": "RZP2mFkBmaXZrjBN",
+          "name": "Postgres account 2"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Truncate chamado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Truncate chamado": {
+      "main": [
+        [
+          {
+            "node": "Select Chamado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Select Chamado": {
+      "main": [
+        [
+          {
+            "node": "Insert_stg_chamado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "28fc15ea-cbe4-436f-96bf-9d7d8b3d67e7",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "58912c12ebd5040be480a3d10cd3c6ce2cf0867efbb1472379ca9ba2a85af90a"
+  },
+  "nodeGroups": [],
+  "id": "ILllMUq7wtCQzXXn",
+  "tags": []
+}
