@@ -312,7 +312,6 @@ Com isso, os dados gerados durante a operação do Helpdesk passaram a ser estru
 
 # 👨‍💻 Desenvolvimento
 
-**Victor Emanuel**
 
 Projeto desenvolvido em ambiente empresarial, envolvendo **desenvolvimento de solução de Helpdesk, integração de dados, ETL, Data Warehouse e Business Intelligence**.
 
