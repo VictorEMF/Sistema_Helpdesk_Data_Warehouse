@@ -1,4 +1,4 @@
-# Sistema_Helpdesk_Data_Warehouse
+# 🎫 Sistema Helpdesk & Data Warehouse
 
 ![status](https://img.shields.io/badge/status-Em_andamento-brightgreen)
 <a href=""><img src="https://img.shields.io/badge/Github-repo-blue?logo=github" alt="Github"/></a>
@@ -7,7 +7,8 @@
 <a href="https://nocodb.com/"><img src="https://img.shields.io/badge/NocoDB-Database-red" alt="NocoDB"/></a>
 <a href="https://www.microsoft.com/pt-br/power-platform/products/power-bi"><img src="https://img.shields.io/badge/Power_BI-Visualization-orange" alt="Power BI"/></a>
 
-# 🎫 Sistema Helpdesk & Data Warehouse
+# 📋 Sobre o Projeto
+
 
 Projeto completo de **Sistema de Helpdesk integrado a um Data Warehouse**, desenvolvido para registrar, controlar e analisar chamados internos de uma organização.
 
