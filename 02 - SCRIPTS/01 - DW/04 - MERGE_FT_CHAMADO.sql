@@ -2,24 +2,24 @@ begin;
 merge into core.ft_chamado fc
 using(
 	select sc.cod_chamado, 
-func_soli.sk_cod_funcionario as sk_cod_funcionario_sol, 
-set_soli.sk_cod_setor as sk_cod_setor_sol, 
-func_resp.sk_cod_funcionario as sk_cod_funcrionario_resp, 
-set_resp.sk_cod_setor as sk_cod_setor_resp, 
-dcc.sk_cod_categoria,
-dd.sk_cod_data,
-sc.status, 
-sc.descricao, 
-sc.atestado, 
-sc.datacadastro, 
-sc.dataatualiza  
-	from stage.stg_chamado sc 
-	left join core.dm_funcionario func_soli on sc.email_solicitante = func_soli.email
-	left join core.dm_funcionario func_resp on sc.email_responsavel = func_resp.email
-	left join core.dm_setor set_soli on sc.setor_solicitante = set_soli.setor
-	left join core.dm_setor set_resp on sc.setor_responsavel = set_resp.setor
-	join core.dm_categoria_chamado dcc on sc.categoria = dcc.categoria
-	join core.dm_data dd on sc.datacadastro::date = dd.nk_cod_data
+	func_soli.sk_cod_funcionario as sk_cod_funcionario_sol, 
+	set_soli.sk_cod_setor as sk_cod_setor_sol, 
+	func_resp.sk_cod_funcionario as sk_cod_funcrionario_resp, 
+	set_resp.sk_cod_setor as sk_cod_setor_resp, 
+	dcc.sk_cod_categoria,
+	dd.sk_cod_data,
+	sc.status, 
+	sc.descricao, 
+	sc.atestado, 
+	sc.datacadastro, 
+	sc.dataatualiza  
+		from stage.stg_chamado sc 
+		left join core.dm_funcionario func_soli on sc.email_solicitante = func_soli.email
+		left join core.dm_funcionario func_resp on sc.email_responsavel = func_resp.email
+		left join core.dm_setor set_soli on sc.setor_solicitante = set_soli.setor
+		left join core.dm_setor set_resp on sc.setor_responsavel = set_resp.setor
+		join core.dm_categoria_chamado dcc on sc.categoria = dcc.categoria
+		join core.dm_data dd on sc.datacadastro::date = dd.nk_cod_data
 	
 )MERGE_SUBQUERY 
 
